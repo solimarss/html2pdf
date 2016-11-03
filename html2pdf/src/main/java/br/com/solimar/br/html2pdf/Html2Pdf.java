@@ -19,16 +19,18 @@ import org.xhtmlrenderer.pdf.ITextRenderer;
 import com.lowagie.text.DocumentException;
 
 public class Html2Pdf {
+	
 
 	public static void main(String[] args) {
 		OutputStream os;
 		try {
 			
 			//String content = readFile("C:\\Users\\66927110291\\Documents\\Declaracao-13-Salario.html", StandardCharsets.UTF_8);
-			String content = readFile("C:\\Users\\66927110291\\Documents\\Declaracao-13-Salario.html", StandardCharsets.ISO_8859_1);
-			os = new FileOutputStream("C:\\Users\\66927110291\\Documents\\Declaracao-13-Salario.pdf");
+			String content = readFile("C:\\Users\\66927110291\\Documents\\Certidao.html", StandardCharsets.ISO_8859_1);
+			os = new FileOutputStream("C:\\Users\\66927110291\\Documents\\Certidao.pdf");
 			Html2Pdf.convert(content, os);
 			os.close();
+			System.out.println("Executado");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (DocumentException e) {
